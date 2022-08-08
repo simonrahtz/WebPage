@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ---------------------------Top Navigation content--------------------------- */
+
+nav {
+    height: 100px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    background: #FDEEEC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) /2);
+}
+
+.logo a {
+    color: rgb(37, 37, 37);
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: rgb(37, 37, 37);
+    padding: 0 1.5rem;
+}
+
+.nav-items :hover {
+    color: white;
+    background-color: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+
+
+/* ---------------------------body content--------------------------- */
+
+.title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.title h1 {
+    font-size: 3rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: rgb(37, 37, 37);
+}
+
+.hero {
+    background: #FDEEEC;
+}
+
+.main {
+    background: White;
+    padding: 30px;
+}
+
+/* ----------Main row used to display columns---------- */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+
+
+.scrollable-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+.scroll-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.scroll-column img {
+    width: 100%;
+}
+
+.text-section {
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-flex: 1;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* ----------Customised columns for each page---------- */
+
+
+.tools-column {
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.testimonial-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.testimonial-column img {
+    border-radius: 50%;
+    width: 80%;
+    padding: 0px 20px 20px;
+}
+
+.testimonial-column p {
+    padding: 0px 20px 20px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.testimonial-column h4 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: rgb(122, 122, 122);
+    font-style: italic;
+}
+
+.tools-column img {
+    margin-top: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    transform: scale(1);
+    transition: 1s ease;
+}
+
+.instrument-column {
+    flex: 25%;
+    justify-content: space-between;
+    max-width: 60%;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.instrument-column img {
+    width: 100%;
+    padding: 40px 20px 20px;
+
+}
+
+.gallery-column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.gallery-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transform: scale(1);
+    transition: 1s ease;
+}
+
+.gallery-column img:hover {
+    transform: scale(1.4);
+    transition: 1s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------------------Responsive layout at 800px-------------------------- */
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .gallery-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .tools-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .testimonial-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .instrument-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* ----------Responsive layout at 600px (all items stack on top of each other---------- */
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .tools-column {
+        flex: 60%;
+        max-width: 60%;
+    }
+
+    .testimonial-column {
+        flex: 60%;
+        max-width: 60%;
+    }
+
+    .instrument-column {
+        flex: 60%;
+        max-width: 90%;
+        padding: 0;
+    }
+
+    nav a {
+
+        padding: 0 1rem;
+    }
+
+
+}
+
+/* ----------Style for pages with left column + right column layout---------- */
+
+
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    padding: 3rem calc((100vw - 1300px) /2);
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: 0rem 2rem;
+    text-align: left;
+
+}
+
+
+.column-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    opacity: 60%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+
+}
+
+.column-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+}
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: rgb(255, 255, 240);
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: #fff;
+    color: #000
+}
+
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.article-text h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+
+.article-text p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.hero-image {
+    width: 80%;
+    height: auto;
+
+}
+
+@media screen and (max-width: 600px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+/* --------------------------Footer content-------------------------- */
+
+
+footer {
+    height: 100px;
+    background-color: rgb(37, 37, 37);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    color: #fff;
+}
+
+
+/* ---------------------------Form styles for contact page--------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+form, input, select, textarea {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+form {
+    margin: 0;
+    height: fit-content;
+    padding: 30px;
+    width: auto;
+    position: relative;
+    background-color: #FDEEEC;
+    border-radius: 5%;
+
+
+}
+
+form h1 {
+    margin-bottom: 10px;
+}
+
+form label p {
+    width: 100px;
+    padding: 5px 20px 0 0;
+}
+
+form .input_text {
+    padding: 10px 10px;
+    width: 200px;
+}
+
+form .message {
+    padding: 7px 7px;
+    width: 400px;
+    overflow: hidden;
+    height: 200px;
+}
+
+form .button {
+    padding: 1rem 3rem;
+    border: none;
+    color: rgb(255, 255, 240);
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+form .button:hover {
+    background: white;
+    color: #000
+}
+
+.social-media {
+    width: 15%;
+    padding: 10px;
+}
